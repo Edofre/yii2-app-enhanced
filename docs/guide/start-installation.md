@@ -59,7 +59,7 @@ That's all. You just need to wait for completion! After that you can access proj
    
    ```
    192.168.83.137 y2aa-frontend.dev
-   192.168.83.137 y2aa-backend.dev
+   192.168.83.137 y2a-backend.dev
    ```
 
 8. Open terminal (`cmd.exe`), **change directory to project root** and run commands:

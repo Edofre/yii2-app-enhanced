@@ -4,7 +4,7 @@ Testing
 Yii2 Advanced Application uses Codeception as its primary test framework. 
 There are already some sample tests prepare in `tests` directory of `frontend`, `backend`, and `common`.
 Tests require **additional database**, which will be cleaned up between tests. 
-Create database `yii2advanced_test` in mysql (according to config in `common/config/test.php`) and execute: 
+Create database `yii2_enhanced_test` in mysql (according to config in `common/config/test.php`) and execute: 
 
 ```
 ./yii_test migrate

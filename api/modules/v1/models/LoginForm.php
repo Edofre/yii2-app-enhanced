@@ -77,6 +77,9 @@ class LoginForm extends \yii\base\Model
 	public function login()
 	{
 		if ($this->validate()) {
+			// Update the last login time for this user
+			$this->getUser()->last_login = time();
+			$this->getUser()->save();
 			return Yii::$app->user->login($this->getUser());
 		}
 

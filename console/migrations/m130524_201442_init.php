@@ -21,8 +21,10 @@ class m130524_201442_init extends Migration
 			'email'                => $this->string()->notNull()->unique(),
 
 			'status'     => $this->smallInteger()->notNull()->defaultValue(10),
+			'last_login' => $this->integer(),
 			'created_at' => $this->integer()->notNull(),
 			'updated_at' => $this->integer()->notNull(),
+			'deleted_at' => $this->integer(),
 		], $tableOptions);
 	}
 

@@ -2,10 +2,14 @@
 return [
 	'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 	'components' => [
-		'cache'      => [
+		'authManager' => [
+			'class'        => 'yii\rbac\DbManager',
+			'defaultRoles' => ['guest'],
+		],
+		'cache'       => [
 			'class' => 'yii\caching\FileCache',
 		],
-		'i18n'       => [
+		'i18n'        => [
 			'translations' => [
 				'*' => [
 					'basePath'              => '@common/messages',
@@ -14,7 +18,7 @@ return [
 				],
 			],
 		],
-		'urlManager' => [
+		'urlManager'  => [
 			'enablePrettyUrl' => true,
 			'showScriptName'  => false,
 		],

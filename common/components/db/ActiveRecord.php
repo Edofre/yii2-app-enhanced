@@ -46,7 +46,6 @@ class ActiveRecord extends \yii\db\ActiveRecord
 		}
 
 		return $model;
-
 	}
 
 	/**

@@ -7,8 +7,8 @@ $I->wantTo('Login fail');
 
 $I->sendPOST('user/login', ['username' => '1admin', 'password' => '']);
 
-$I->seeResponseCodeIs(200);
+$I->seeResponseCodeIs(422);
 $I->seeResponseIsJson();
-$I->seeResponseContains("2Uu1qHcde0diwUol3xeI-18MuHkkprQI");
+$I->seeResponseContains("Password cannot be blank.");
 
 // Done

@@ -9,6 +9,6 @@ $I->sendPOST('user/login', ['username' => 'admin', 'password' => 'password_0']);
 
 $I->seeResponseCodeIs(200);
 $I->seeResponseIsJson();
-$I->seeResponseContains("2Uu1qHcde0diwUol3xeI-18MuHkkprQI");
+$I->seeResponseContains("1Uu1qHcde0diwUol3xeI-18MuHkkprQI");
 
 // Done

@@ -1,12 +1,13 @@
 <?php
 
-namespace frontend\models;
+namespace api\modules\v1\models;
 
 use Yii;
 use yii\base\Model;
 
 /**
- * ContactForm is the model behind the contact form.
+ * Class ContactForm
+ * @package api\modules\v1\models
  */
 class ContactForm extends Model
 {
@@ -18,8 +19,6 @@ class ContactForm extends Model
 	public $subject;
 	/** @var */
 	public $body;
-	/** @var */
-	public $verifyCode;
 
 	/**
 	 * @inheritdoc
@@ -27,22 +26,8 @@ class ContactForm extends Model
 	public function rules()
 	{
 		return [
-			// name, email, subject and body are required
-			[['name', 'email', 'subject', 'body'], 'required'],
-			// email has to be a valid email address
-			['email', 'email'],
-			// verifyCode needs to be entered correctly
-			['verifyCode', 'captcha'],
-		];
-	}
-
-	/**
-	 * @inheritdoc
-	 */
-	public function attributeLabels()
-	{
-		return [
-			'verifyCode' => 'Verification Code',
+			[['name', 'email', 'subject', 'body'], 'required'], // name, email, subject and body are required
+			['email', 'email'], // email has to be a valid email address
 		];
 	}
 

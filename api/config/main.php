@@ -24,14 +24,10 @@ return [
 			// this is the name of the session cookie used for login on the api
 			'name' => 'advanced-api',
 		],
-		'user'       => [
-			'identityClass'   => 'common\models\User',
-			'enableAutoLogin' => true,
-			'loginUrl'        => null,
-			'identityCookie'  => [
-				'name'     => '_identity-backend',
-				'httpOnly' => true,
-			],
+		'user' => [
+			'identityClass' => 'common\models\User',
+			'enableSession' => false,
+			'loginUrl' => null,
 		],
 		'response'   => [
 			'format'  => yii\web\Response::FORMAT_JSON,
@@ -40,7 +36,7 @@ return [
 		'request'    => [
 			'class'                  => '\yii\web\Request',
 			'enableCookieValidation' => false,
-			'csrfParam'              => '_csrf-backend',
+			'csrfParam'              => '_csrf-api',
 			'parsers'                => [
 				'application/json' => 'yii\web\JsonParser',
 			],
@@ -68,6 +64,17 @@ return [
 					],
 					'extraPatterns' => [
 						'POST login' => 'login',
+					],
+				],
+				[
+					'class'         => 'yii\rest\UrlRule',
+					'controller'    => 'v1/contact',
+					'pluralize'     => false,
+					'only'          => [
+						'message',
+					],
+					'extraPatterns' => [
+						'POST message' => 'message',
 					],
 				],
 			],

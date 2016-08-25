@@ -28,6 +28,10 @@ return [
 			// this is the name of the session cookie used for login on the backend
 			'name' => 'advanced-backend',
 		],
+		'urlManager'   => [
+			'enablePrettyUrl' => true,
+			'showScriptName'  => false,
+		],
 		'log'          => [
 			'traceLevel' => YII_DEBUG ? 3 : 0,
 			'targets'    => [

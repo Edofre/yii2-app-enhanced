@@ -1,14 +1,26 @@
 <?php
 
 return [
-    [
-        'username' => 'bayer.hudson',
-        'auth_key' => 'HP187Mvq7Mmm3CTU80dLkGmni_FUH_lR',
-        //password_0
-        'password_hash' => '$2y$13$EjaPFBnZOQsHdGuHI.xvhuDp1fHpo8hKRSk6yshqa9c5EG8s3C3lO',
-        'password_reset_token' => 'ExzkCOaYc1L8IOBs4wdTGGbgNiG3Wz1I_1402312317',
-        'created_at' => '1402312317',
-        'updated_at' => '1402312317',
-        'email' => 'nicole.paucek@schultz.info',
-    ],
+	[
+		'id'                   => 1,
+		'username'             => 'admin',
+		'auth_key'             => '1Uu1qHcde0diwUol3xeI-18MuHkkprQI',
+		'password_hash'        => '$2y$13$nJ1WDlBaGcbCdbNC5.5l4.sgy.OMEKCqtDQOdQ2OWpgiKRWYyzzne', // password_0
+		'password_reset_token' => 'RkD_Jw0_8HEedzLk7MM-ZKEFfYR7VbMr_1392559490',
+		'last_login'           => time(),
+		'created_at'           => time(),
+		'updated_at'           => time(),
+		'email'                => 'admin@test.com',
+	],
+	[
+		'id'                   => 2,
+		'username'             => 'member',
+		'auth_key'             => '2Uu1qHcde0diwUol3xeI-18MuHkkprQI',
+		'password_hash'        => '$2y$13$nJ1WDlBaGcbCdbNC5.5l4.sgy.OMEKCqtDQOdQ2OWpgiKRWYyzzne', // password_0
+		'password_reset_token' => 'RkD_Jw0_8HEedzLk7MM-ZKEFfYR7VbMr_1392559491',
+		'last_login'           => time(),
+		'created_at'           => time(),
+		'updated_at'           => time(),
+		'email'                => 'member@test.com',
+	],
 ];

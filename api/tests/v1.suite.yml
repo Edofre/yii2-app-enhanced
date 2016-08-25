@@ -1,0 +1,12 @@
+class_name: ApiTester
+modules:
+    enabled:
+      - Filesystem
+      - Yii2:
+            configFile: 'config/test.php'
+      - PhpBrowser:
+            url: 'http://enhanced-api.nl/index-test.php'
+      - REST:
+            url: '/v1/'
+            depends: PhpBrowser
+            part: Json

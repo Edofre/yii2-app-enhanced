@@ -8,6 +8,9 @@ namespace api\modules\v1\models;
  */
 class User extends \common\models\User
 {
+	/**
+	 * @return array
+	 */
 	public function fields()
 	{
 		$fields = parent::fields();

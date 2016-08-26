@@ -1,9 +1,13 @@
 class_name: AcceptanceTester
 modules:
     enabled:
+        - Filesystem
         - WebDriver:
+#            host: 127.0.0.1
+#            url: http://enhanced-front.nl
+#            port: 4444
             url: http://127.0.0.1:8080/
-            browser: firefox
+            browser: phantomjs
         - Yii2:
             configFile: 'config/test.php'
             part: ORM # allow to use AR methods

@@ -6,6 +6,9 @@ use Yii;
 use yii\base\Model;
 
 /**
+ * Class ContactForm
+ * @package frontend\models
+ *
  * ContactForm is the model behind the contact form.
  */
 class ContactForm extends Model
@@ -42,7 +45,11 @@ class ContactForm extends Model
 	public function attributeLabels()
 	{
 		return [
-			'verifyCode' => 'Verification Code',
+			'name'       => Yii::t('contact', 'Name'),
+			'subject'    => Yii::t('contact', 'Subject'),
+			'body'       => Yii::t('contact', 'Body'),
+			'email'      => Yii::t('contact', 'Email'),
+			'verifyCode' => Yii::t('contact', 'Verification Code'),
 		];
 	}
 

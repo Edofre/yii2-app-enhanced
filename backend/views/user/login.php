@@ -25,10 +25,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 			<?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-			<div style="color:#999;margin:1em 0">
-				<?= Html::a(Yii::t('user', 'Click here if you want to reset your password'), ['site/request-password-reset']); ?>
-			</div>
-
 			<div class="form-group">
 				<?= Html::submitButton(Yii::t('user', 'Login'), ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
 			</div>

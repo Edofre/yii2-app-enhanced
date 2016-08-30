@@ -1,7 +1,7 @@
 <?php
 namespace frontend\controllers;
 
-use common\models\LoginForm;
+use common\models\forms\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;

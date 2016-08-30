@@ -113,14 +113,14 @@ class UserController extends Controller
 		$model = new PasswordResetRequestForm();
 		if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 			if ($model->sendEmail()) {
-				Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+				Yii::$app->session->setFlash('success', Yii::t('user', 'Check your email for further instructions.'));
 				return $this->goHome();
 			} else {
-				Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+				Yii::$app->session->setFlash('error', Yii::t('user', 'Sorry, we are unable to reset password for email provided.'));
 			}
 		}
 
-		return $this->render('request-token', [
+		return $this->render('request-password-reset', [
 			'model' => $model,
 		]);
 	}
@@ -141,7 +141,7 @@ class UserController extends Controller
 		}
 
 		if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-			Yii::$app->session->setFlash('success', 'New password was saved.');
+			Yii::$app->session->setFlash('success', Yii::t('user', 'New password was saved.'));
 
 			return $this->goHome();
 		}

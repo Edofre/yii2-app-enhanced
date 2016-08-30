@@ -14,6 +14,7 @@ return [
 	'Search'                               => 'Zoeken',
 	'Upload'                               => 'Uploaden',
 	'Edit'                                 => 'Bewerken',
+	'Submit'                               => 'Versturen',
 
 	/** General error messages */
 	'Format should be {format}'            => 'Formaat moet zijn: {format}.',

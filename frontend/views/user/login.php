@@ -10,7 +10,7 @@ use yii\bootstrap\Html;
 $this->title = Yii::t('user', 'Login');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
+<div class="user-login">
 	<h1><?= Html::encode($this->title) ?></h1>
 
 	<p><?= Yii::t('user', 'Please fill out the following fields to login:'); ?></p>
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?= $form->field($model, 'rememberMe')->checkbox() ?>
 
 			<div style="color:#999;margin:1em 0">
-				<?= Html::a(Yii::t('user', 'click here if you want to reset your password'), ['site/request-password-reset']); ?>
+				<?= Html::a(Yii::t('user', 'Click here if you want to reset your password'), ['site/request-password-reset']); ?>
 			</div>
 
 			<div class="form-group">

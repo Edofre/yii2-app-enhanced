@@ -9,6 +9,6 @@ $I->sendPOST('user/login', ['username' => '1admin', 'password' => '']);
 
 $I->seeResponseCodeIs(422);
 $I->seeResponseIsJson();
-$I->seeResponseContains("Password cannot be blank.");
+$I->seeResponseContains(Yii::t('user', "Password cannot be blank."));
 
 // Done

@@ -15,6 +15,7 @@ return [
 	'Upload'                               => 'Uploaden',
 	'Edit'                                 => 'Bewerken',
 	'Submit'                               => 'Versturen',
+	'Send'                                 => 'Verstuur',
 
 	/** General error messages */
 	'Format should be {format}'            => 'Formaat moet zijn: {format}.',

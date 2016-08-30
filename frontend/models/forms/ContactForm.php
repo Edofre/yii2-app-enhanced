@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace frontend\models\forms;
 
 use Yii;
 use yii\base\Model;
@@ -44,13 +44,13 @@ class ContactForm extends Model
 	 */
 	public function attributeLabels()
 	{
-		return [
+		return array_merge(parent::attributeLabels(), [
 			'name'       => Yii::t('contact', 'Name'),
 			'subject'    => Yii::t('contact', 'Subject'),
 			'body'       => Yii::t('contact', 'Body'),
 			'email'      => Yii::t('contact', 'Email'),
 			'verifyCode' => Yii::t('contact', 'Verification Code'),
-		];
+		]);
 	}
 
 	/**

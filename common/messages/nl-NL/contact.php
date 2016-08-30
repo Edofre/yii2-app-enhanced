@@ -13,7 +13,7 @@ return [
 	'Email'                                                                                                           => 'E-mail',
 	'Subject'                                                                                                         => 'Onderwerp',
 	'Body'                                                                                                            => 'Bericht',
-	'Verification Code' => 'Verificatiecode',
+	'Verification Code'                                                                                               => 'Verificatiecode',
 
 	/** site/contact */
 	'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => 'Als u vragen heeft kunt u het onderstaande formulier invullen.',

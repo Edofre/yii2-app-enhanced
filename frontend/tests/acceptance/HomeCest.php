@@ -16,8 +16,8 @@ class HomeCest
 		$I->amOnUrl('http://enhanced-front.nl');
 		$I->amOnPage(Url::toRoute('/site/home'));
 		$I->see('My Company');
-		$I->seeLink('About');
-		$I->click('About');
-		$I->see('This is the About page.');
+		$I->seeLink(Yii::t('site', 'About'));
+		$I->click(Yii::t('site', 'About'));
+		$I->see(Yii::t('site', 'This is the About page. You may modify the following file to customize its content:'));
 	}
 }

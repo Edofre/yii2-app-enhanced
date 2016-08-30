@@ -6,6 +6,7 @@ return yii\helpers\ArrayHelper::merge(
 	[
 		'id'         => 'common',
 		'basePath'   => dirname(__DIR__),
+		'language'   => 'nl-NL',
 		'components' => [
 			'user' => [
 				'class'         => 'yii\web\User',

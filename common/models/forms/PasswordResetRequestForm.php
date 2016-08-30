@@ -1,17 +1,18 @@
 <?php
-namespace frontend\models;
+namespace common\models\forms;
 
 use common\models\User;
 use Yii;
 use yii\base\Model;
 
 /**
- * Password reset request form
+ * Class PasswordResetRequestForm
+ * @package common\models\forms
  */
 class PasswordResetRequestForm extends Model
 {
+	/** @var */
 	public $email;
-
 
 	/**
 	 * @inheritdoc
@@ -29,6 +30,16 @@ class PasswordResetRequestForm extends Model
 				'message'     => 'There is no user with such email.',
 			],
 		];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function attributeLabels()
+	{
+		return array_merge(parent::attributeLabels(), [
+			'email' => Yii::t('user', 'Email'),
+		]);
 	}
 
 	/**
@@ -62,7 +73,7 @@ class PasswordResetRequestForm extends Model
 			)
 			->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . ' robot'])
 			->setTo($this->email)
-			->setSubject('Password reset for ' . Yii::$app->name)
+			->setSubject(Yii::t('user', 'Password reset for {name}', ['username' => Yii::$app->name]))
 			->send();
 	}
 }

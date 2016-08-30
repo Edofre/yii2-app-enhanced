@@ -3,7 +3,7 @@
 namespace frontend\tests\unit\models;
 
 use Yii;
-use frontend\models\PasswordResetRequestForm;
+use common\models\forms\PasswordResetRequestForm;
 use common\fixtures\User as UserFixture;
 use common\models\User;
 
@@ -31,13 +31,6 @@ class PasswordResetRequestFormTest extends \Codeception\Test\Unit
         expect_not($model->sendEmail());
     }
 
-    public function testNotSendEmailsToInactiveUser()
-    {
-        $user = $this->tester->grabFixture('user', 1);
-        $model = new PasswordResetRequestForm();
-        $model->email = $user['email'];
-        expect_not($model->sendEmail());
-    }
 
     public function testSendEmailSuccessfully()
     {

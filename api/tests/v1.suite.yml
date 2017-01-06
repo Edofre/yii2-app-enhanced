@@ -5,7 +5,7 @@ modules:
       - Yii2:
             configFile: 'config/test.php'
       - PhpBrowser:
-            url: 'http://enhanced-api.nl/index-test.php'
+            url: 'http://api-enhanced-yii2.dev/index-test.php'
       - REST:
             url: '/v1/'
             depends: PhpBrowser

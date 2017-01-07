@@ -1,12 +1,17 @@
 <?php
 $config = yii\helpers\ArrayHelper::merge(
-	require(YII_APP_BASE_PATH . '/common/config/test.php'),
-	require(YII_APP_BASE_PATH . '/common/config/test-local.php'),
-	require(__DIR__ . '/main.php'),
-	require(__DIR__ . '/main-local.php'),
-	[
-		'id' => 'backend-tests',
-	]
+    require(YII_APP_BASE_PATH . '/common/config/test.php'),
+    require(YII_APP_BASE_PATH . '/common/config/test-local.php'),
+    require(__DIR__ . '/main.php'),
+    require(__DIR__ . '/main-local.php'),
+    [
+        'id'         => 'backend-tests',
+        'components' => [
+            'assetManager' => [
+                'basePath' => __DIR__ . '/../web/assets',
+            ],
+        ],
+    ]
 );
 
 return $config;

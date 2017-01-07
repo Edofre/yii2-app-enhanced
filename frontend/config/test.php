@@ -5,7 +5,12 @@ $config = yii\helpers\ArrayHelper::merge(
     require(__DIR__ . '/main.php'),
     require(__DIR__ . '/main-local.php'),
     [
-        'id' => 'frontend-tests',
+        'id'         => 'frontend-tests',
+        'components' => [
+            'assetManager' => [
+                'basePath' => __DIR__ . '/../web/assets',
+            ],
+        ],
     ]
 );
 

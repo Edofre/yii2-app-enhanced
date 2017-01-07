@@ -1,6 +1,7 @@
 language: php
 
 php:
+  - 5.4
   - 5.5
   - 5.6
   - 7.0
@@ -25,7 +26,6 @@ install:
     sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" frontend/config/main.php
     sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" backend/config/main.php
     sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" api/config/main.php
-
 before_script:
   - mysql -e 'CREATE DATABASE yii2_enhanced_test;'
   - php yii_test migrate --interactive=0
@@ -33,3 +33,6 @@ before_script:
 script:
   - composer validate --strict
   - composer exec codecept run
+
+
+

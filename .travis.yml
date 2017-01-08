@@ -33,7 +33,7 @@ script:
   - composer validate --strict
   - composer exec codecept build
   - composer exec codecept config:validate
-  - composer exec codecept run
+  - composer exec codecept run -vv
 
 
 

@@ -1,6 +1,8 @@
 Yii 2 Enhanced Project Template
 ===============================
 
+[![Build Status](https://travis-ci.org/Edofre/yii2-app-enhanced.svg?branch=master)](https://travis-ci.org/Edofre/yii2-app-enhanced)
+
 Yii 2 Enhanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
 developing complex Web applications with multiple tiers.
 
